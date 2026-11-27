@@ -1,0 +1,24 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Marine Biodiversity Chatbot",
+			"type": "shell",
+			"options": {
+				"cwd": "${workspaceFolder}\\marinebot_project"
+			},
+			"command": "python",
+			"args": [
+				"-m",
+				"uvicorn",
+				"main:app",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"8000"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

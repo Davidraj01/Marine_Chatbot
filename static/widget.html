@@ -4,6 +4,67 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Marine Biodiversity Assistant</title>
   <link rel="stylesheet" href="/static/widget.css">
+  <style>
+    @media (max-width: 600px) {
+      .chat-panel {
+        right: 8px;
+        bottom: 8px;
+        width: min(460px, calc(100vw - 16px));
+        height: min(460px, calc(100vh - 16px));
+        min-height: 0;
+      }
+      .chat-panel.compact {
+        height: min(95px, calc(100vh - 16px));
+      }
+      .chat-panel.compact #minimize {
+        display: none;
+      }
+      .chat-panel.compact .chat-header {
+        height: 80px;
+        flex-basis: 80px;
+        padding: 10px 12px;
+      }
+      .chat-panel.compact .brand-avatar {
+        width: 48px;
+        height: 48px;
+      }
+      .chat-panel.compact .brand-copy h1 {
+        font-size: 14px;
+      }
+      .chat-panel.compact .brand-copy p {
+        font-size: 10px;
+      }
+      .chat-panel.compact .chat-body {
+        display: none;
+      }
+      .chat-panel.expanded {
+        top: 50%;
+        right: 8px;
+        bottom: auto;
+        height: min(560px, calc(100vh - 32px));
+      }
+      .chat-panel.expanded.open {
+        transform: translateY(-50%) scale(1);
+      }
+      .chat-panel.expanded #expandChat {
+        display: none;
+      }
+      .quick-prompts {
+        gap: 5px;
+        padding: 3px 0 6px;
+        flex-wrap: nowrap;
+      }
+      .quick-prompts button {
+        padding: 7px 6px;
+        font-size: 10px;
+        white-space: nowrap;
+      }
+      .chat-footer {
+        padding: 6px 0 0;
+        font-size: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="widget-layer">
@@ -14,7 +75,7 @@
       <header class="chat-header">
         <div class="header-art"></div><img class="brand-avatar" src="/static/Marine%20AI%20Assistant%20Avatar.png" alt="Marine Biodiversity logo">
         <div class="brand-copy"><h1>Marine Biodiversity</h1><p>Explore · Protect · Restore</p></div>
-        <div class="header-actions"><button id="minimize" aria-label="Minimize chat">−</button><button id="closeChat" aria-label="Close chat">×</button></div>
+        <div class="header-actions"><button id="expandChat" aria-label="Expand chat">+</button><button id="minimize" aria-label="Minimize chat">−</button><button id="closeChat" aria-label="Close chat">×</button></div>
       </header>
       <div class="chat-body">
         <div class="messages" id="messages" aria-live="polite">

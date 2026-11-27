@@ -47,7 +47,7 @@ Use the chatbot's full public URL in the `data-chatbot-url` attribute:
 <script src="https://YOUR-CHATBOT-HOST/static/embed.js" data-chatbot-url="https://YOUR-CHATBOT-HOST"></script>
 ```
 
-The `data-chatbot-url` value must be the base URL of the deployed FastAPI app (no trailing slash required). The embed script creates a small floating iframe and expands it when the chat opens. It does not replace the host website.
+The `data-chatbot-url` value must be the base URL of the deployed FastAPI app (no trailing slash required). The embed script creates a small floating iframe and expands it into a compact panel that stays within the available viewport. It does not replace the host website.
 
 ## 3. Customize organization facts
 

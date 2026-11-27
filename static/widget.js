@@ -3,6 +3,7 @@
   const launcher = document.getElementById("launcher");
   const closeButton = document.getElementById("closeChat");
   const minimizeButton = document.getElementById("minimize");
+  const expandButton = document.getElementById("expandChat");
   const form = document.getElementById("chatForm");
   const input = document.getElementById("messageInput");
   const messages = document.getElementById("messages");
@@ -13,18 +14,30 @@
 
   function setOpen(open) {
     if (window.parent !== window) {
-      window.parent.postMessage({ type: "MARINEBOT_RESIZE", open }, "*");
+      window.parent.postMessage({ type: "MARINEBOT_RESIZE", open, expanded: open }, "*");
     }
+    panel.classList.toggle("compact", false);
+    panel.classList.toggle("expanded", open);
     panel.classList.toggle("open", open);
     panel.setAttribute("aria-hidden", String(!open));
     launcher.setAttribute("aria-expanded", String(open));
     launcher.style.opacity = open ? "0" : "1";
     launcher.style.pointerEvents = open ? "none" : "auto";
     if (open) setTimeout(() => input.focus(), 180);
+    else launcher.focus();
+  }
+  function setExpanded(expanded) {
+    panel.classList.toggle("compact", !expanded);
+    panel.classList.toggle("expanded", expanded);
+    if (window.parent !== window) {
+      window.parent.postMessage({ type: "MARINEBOT_RESIZE", open: true, expanded }, "*");
+    }
+    if (expanded) setTimeout(() => input.focus(), 180);
   }
   launcher.addEventListener("click", () => setOpen(true));
   closeButton.addEventListener("click", () => setOpen(false));
-  minimizeButton.addEventListener("click", () => setOpen(false));
+  minimizeButton.addEventListener("click", () => setExpanded(false));
+  expandButton.addEventListener("click", () => setExpanded(true));
   window.addEventListener("message", event => {
     if (event.data && event.data.type === "MARINEBOT_OPEN") setOpen(true);
   });
