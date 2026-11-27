@@ -1,0 +1,54 @@
+{
+  "organization": {
+    "name": "Marine Biodiversity Conservation Trust (MBCT)",
+    "website": "https://www.marinebiodiversityconservation.com/",
+    "location": "Chengalpattu District, Tamil Nadu, India",
+    "mission": "To conserve and restore marine biodiversity through scientific research, community engagement, and sustainable practices, ensuring healthy oceans for future generations.",
+    "tagline": "Explore • Protect • Restore",
+    "about": "A registered non-profit charitable trust dedicated to protecting marine life, coral reefs, coastal ecosystems, and ocean biodiversity.",
+    "movement": "MBCT is a community-driven marine conservation movement led by environmentalists, passionate individuals, and youth volunteers. It brings people from students to scientists together to protect, restore, and sustain marine ecosystems and build a healthy, sustainable blue planet. Its website describes its approach as educating, empowering, and engaging the public through community programs, cleanup drives, and digital awareness campaigns."
+  },
+  "programs": [
+    "Awareness and education programs in schools, colleges, and communities",
+    "Beach cleanups and coastal restoration activities",
+    "Mangrove restoration, environmental rehabilitation, and youth training",
+    "Research and monitoring of marine ecosystems",
+    "Partnerships with governments, NGOs, and institutions",
+    "Community-driven conservation programs"
+  ],
+  "objectives": [
+    {
+      "name": "Conservation and protection",
+      "details": "Protect species, habitats, and ecosystems including coral reefs, mangroves, sea turtles, sharks, and dugongs."
+    },
+    {
+      "name": "Sustainable use",
+      "details": "Encourage responsible fisheries, eco-friendly aquaculture, and better coastal management."
+    },
+    {
+      "name": "Research and monitoring",
+      "details": "Use surveys, species monitoring, habitat checks, and water-quality observations to support evidence-based conservation."
+    },
+    {
+      "name": "Awareness and education",
+      "details": "Build ocean literacy through workshops, school programs, and public campaigns."
+    },
+    {
+      "name": "Collaboration",
+      "details": "Work with governments, NGOs, scientists, and local communities."
+    }
+  ],
+  "major_threats": [
+    "Plastic pollution harms wildlife and ecosystems.",
+    "Overfishing removes key species and disrupts food webs.",
+    "Climate change, ocean warming, and acidification contribute to coral bleaching and habitat loss.",
+    "Coastal development and dredging can damage mangroves and seagrass beds."
+  ],
+  "get_involved": "The website invites students, educators, and citizens to become volunteers and ocean ambassadors. The chatbot should direct visitors to the official website for current participation and support details.",
+  "contact": {
+    "organization": "Marine Biodiversity Conservation Trust",
+    "address": "No: 81/5, 6th Street, Shanthi Nagar, Chengalpattu District, Tamil Nadu – 603003",
+    "phone": "+91 99944 01291",
+    "website": "https://www.marinebiodiversityconservation.com/"
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Marine Biodiversity Assistant</title>
+  <link rel="stylesheet" href="/static/widget.css">
+</head>
+<body>
+  <div class="widget-layer">
+    <button class="launcher" id="launcher" aria-label="Open marine biodiversity assistant" aria-expanded="false">
+      <span class="launcher-ring"></span><img src="/static/Marine%20AI%20Assistant%20Avatar.png" alt=""><span class="launcher-dot"></span>
+    </button>
+    <section class="chat-panel" id="chatPanel" aria-label="Marine Biodiversity chat" aria-hidden="true">
+      <header class="chat-header">
+        <div class="header-art"></div><img class="brand-avatar" src="/static/Marine%20AI%20Assistant%20Avatar.png" alt="Marine Biodiversity logo">
+        <div class="brand-copy"><h1>Marine Biodiversity</h1><p>Explore · Protect · Restore</p></div>
+        <div class="header-actions"><button id="minimize" aria-label="Minimize chat">−</button><button id="closeChat" aria-label="Close chat">×</button></div>
+      </header>
+      <div class="chat-body">
+        <div class="messages" id="messages" aria-live="polite">
+          <div class="message-row bot-row"><img class="message-avatar" src="/static/Marine%20AI%20Assistant%20Avatar.png" alt=""><div class="bubble bot-bubble">Hello! 👋<br>I'm your Marine Biodiversity assistant.<br>Ask me about ocean life, conservation or our programs!</div></div>
+        </div>
+        <div class="quick-prompts" id="quickPrompts">
+          <button data-prompt="Tell me about marine animals.">🐠 Marine Animals</button>
+          <button data-prompt="What are some practical ocean conservation tips?">🌿 Conservation Tips</button>
+          <button data-prompt="What does Marine Biodiversity Conservation Trust do?">🌎 Our Work</button>
+        </div>
+        <form class="composer" id="chatForm"><textarea id="messageInput" rows="1" maxlength="4000" placeholder="Type your question..." aria-label="Type your question"></textarea><button class="send-button" id="sendButton" type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5 21 12 3 3.5l2.2 6.8L15 12l-9.8 1.7L3 20.5Z"/></svg></button></form>
+        <div class="chat-footer"><span class="sparkle">✦</span> Powered by <b>Marine AI</b><span class="secure-label">AI assistant</span></div>
+      </div>
+    </section>
+  </div>
+  <script src="/static/widget.js?v=2"></script>
+</body>
+</html>
